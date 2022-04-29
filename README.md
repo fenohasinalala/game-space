@@ -41,5 +41,5 @@ il est preferable qui l'image soit in png mais si non le fond doit etre en coile
 
 ## remarque
 les image seron dans le dossier image  
-c'est mien si pour travailer dans le front end: om modifit la brance front-end et non main   
+c'est mieu si pour travailer dans le front end: om modifit la brance front-end et mais pas le main   
  	[savoit push sur une autre branche](https://www.theserverside.com/blog/Coffee-Talk-Java-News-Stories-and-Opinions/git-push-new-branch-remote-github-gitlab-upstream-example)  
