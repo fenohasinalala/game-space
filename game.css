@@ -1,0 +1,34 @@
+body{
+    border: 1px brown solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#bodyGame{
+    width:500px;
+    height: 500px;
+    border: 1px brown solid;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+#bodyGame div{
+    width: 6%;
+    height: 6%;
+    border: black 1px solid;
+    flex: none;
+}
+.enemiGame{
+    background-color: aquamarine;
+}
+.explosionGame{
+    background-color: brown;
+}
+.micilame{
+    background-color: burlywood;
+}
+.alierGame{
+    background-color: black;
+}
