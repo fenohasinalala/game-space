@@ -109,8 +109,18 @@ function shoot(e) {
         squares[currentlaser].classList.remove("micilame")
         currentlaser -= width
         squares[currentlaser].classList.add("micilame")
+        if (squares[currentlaser].classList.contains('enemiGame')) {
+            squares[currentlaser].classList.remove("micilame")
+            squares[currentlaser].classList.remove("enemiGame")
+            squares[currentlaser].classList.add("explosionGame")
+            clearTimeout(laserId)
+        }
+        if (currentlaser<width) {
+            squares[currentlaser].classList.remove("micilame")
+            clearTimeout(laserId)
+        }
     }
-    
+
 switch (e.key) {
     //clik.key renvoi un array contenont le nom de l'ogjet "e"
     case 'ArrowUp':
