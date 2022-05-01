@@ -4,7 +4,14 @@ let placeOfAlier = 202
 let width = 15
 let direction = +1
 let timereAlien
+let score = 0
+let timescore
+let vitessAlien = 600
 //let score = document.
+
+function scorefunction() {
+    score ++
+}
 
 for (let i = 0; i < 225; i++) {
     const caseGame = document.createElement('div');
@@ -16,7 +23,7 @@ for (let i = 0; i < 225; i++) {
 const squares = Array.from(document.querySelectorAll('#bodyGame div'));
 //construire un tableau dans les cases sont tout le div dans "bodyGame"
 
-const alienInvaders = [
+let alienInvaders = [
     0,1,2,3,4,5,6,7,
     15,16,17,18,19,20,21,22,
     30,31,36,37
@@ -91,15 +98,10 @@ function moveAlien() {
         clearTimeout(timereAlien)
         //areté la repetition "timereAlien"
     }
-    for (let i = 0; i < alienInvaders.length; i++) {
-        if (squares[alienInvaders[i]].classList.contains('explosionGame', 'enemiGame')) {
-
-        }
-    }
 }
 
-timereAlien = setInterval(moveAlien, 50)
-//refaire le fonction "movealien" tout les 50ms
+timereAlien = setInterval(moveAlien, vitessAlien)
+//refaire le fonction "movealien" tout les vitessAlien ms
 
 
 function shoot(e) {
@@ -113,7 +115,24 @@ function shoot(e) {
             squares[currentlaser].classList.remove("micilame")
             squares[currentlaser].classList.remove("enemiGame")
             squares[currentlaser].classList.add("explosionGame")
+            score++
+            document.getElementById("scorePoint").innerHTML = score
             clearTimeout(laserId)
+            setTimeout(() => {squares[currentlaser].classList.remove("explosionGame");}, 100)
+            clearTimeout(timereAlien)
+            let a=[...alienInvaders.slice(0,alienInvaders.indexOf(currentlaser)),...alienInvaders.slice(alienInvaders.indexOf(currentlaser)+1)]
+            if (a.length==0) { 
+                vitessAlien-=100
+                alienInvaders = [
+                    0,1,2,3,4,5,6,7,
+                    15,16,17,18,19,20,21,22,
+                    30,31,36,37
+                ]
+            }else{
+                alienInvaders=a
+            }
+            timereAlien = setInterval(moveAlien, vitessAlien)
+            // console.log(alienInvaders.indexOf(currentlaser));
         }
         if (currentlaser<width) {
             squares[currentlaser].classList.remove("micilame")
@@ -121,15 +140,15 @@ function shoot(e) {
         }
     }
 
-switch (e.key) {
-    //clik.key renvoi un array contenont le nom de l'ogjet "e"
-    case 'ArrowUp':
-        //le touche haut
-        laserId = setInterval(movelaser, 100)
-        break;
-    default:
-        break;
-}
+    switch (e.key) {
+        //clik.key renvoi un array contenont le nom de l'ogjet "e"
+        case 'ArrowUp':
+            //le touche haut
+            laserId = setInterval(movelaser, 100)
+            break;
+        default:
+            break;
+    }
 
 
 }
