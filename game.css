@@ -24,7 +24,7 @@ body{
     background-color: aquamarine;
 }
 .explosionGame{
-    background-color: brown;
+    background-color: brown !important;
 }
 .micilame{
     background-color: burlywood;
