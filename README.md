@@ -6,7 +6,7 @@ jeux de vaiseau
 
 ### en tete
 l'en tete se trouve dans un div        
-il contien le titre du jeux puit un bouton demarer le jeux        
+il contien le titre du jeux puit un bouton demarer le jeux  (GAME)
 
 ### cadre score
 se trouve dans un div       
