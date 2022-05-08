@@ -8,15 +8,18 @@
     <link rel="stylesheet" href="game.css">
 </head>
 <body>
-    <div id="headGame">
-        <h2>GAME SPACE</h2><br>
-        <input type="button" value="Demaré" class="boutton"><br>
-        <p ></p>
-    </div>
-    <div id="scoreGame">
-        <p>Score: </p><p id="scorePoint">0</p>
-    </div>
-    <div id="bodyGame">
+    <h2>GAME SPACE</h2><br>
+    <div id="GameBody">
+        <div id="EnTete">
+            <div id="headGame">
+                <input type="button" value="Start" class="boutton" id="startGame"><br>
+            </div>
+            <div id="scoreGame">
+                <p>Score: </p><p id="scorePoint">0</p>
+            </div>
+        </div>
+        <div id="bodyGame" class="noActiv">
+        </div>
     </div>
 
     <script src="index.js"></script>
