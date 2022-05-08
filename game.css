@@ -1,34 +1,61 @@
 body{
-    border: 1px brown solid;
+    /*border: 1px brown solid;*/
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 #bodyGame{
+    background-position: 0% 100%;
     width:500px;
     height: 500px;
-    border: 1px brown solid;
+    border: 1px rgb(0, 0, 0) solid;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    background-size: 500px 4000px;
+    background-image: url('image/gamemapspace.jpg');
+    animation: defile 50s infinite linear;
+}
+.noActiv{
+    display: none !important;
+}
+
+#EnTete,#scoreGame{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
 }
+
+@keyframes defile {
+    from {background-position: 0% 0px;}
+    to {background-position: 0% 2000px;}
+    }
+
 #bodyGame div{
     width: 6%;
     height: 6%;
-    border: black 1px solid;
+    border: rgba(255, 255, 255, 0) 1px solid;
     flex: none;
 }
+
 .enemiGame{
-    background-color: aquamarine;
+    background-image: url('image/alienveseau.png');
+    background-size: 100% 100%;
 }
 .explosionGame{
-    background-color: brown !important;
+    background-image: url('image/expod.png');
+    background-size: 100% 100%;
 }
+
 .micilame{
-    background-color: burlywood;
+    background-image: url('image/micil.png');
+    background-size: 100% 100%;
 }
 .alierGame{
-    background-color: black;
+    background-image: url('image/aliervaiseau.png');
+    background-size: 100% 100%;
 }
