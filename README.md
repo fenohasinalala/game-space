@@ -30,12 +30,12 @@ il est preferable qui l'image soit in png mais si non le fond doit etre en coile
 un class construit sur le CSS qui donne un bacgrandeimage d'un esplision  
 il est preferable qui l'image soit in png mais si non le fond doit etre en coileur blanc  
 
-### micille
+### missile
 un class construit sur le CSS qui donne un bacgrandeimage d'un micille  
 rectongulaire du sence haut bas  
 il est preferable qui l'image soit in png mais si non le fond doit etre en coileur blanc  
 
-### vaiseau alier
+### vaiseau allié
 un class construit sur le CSS qui donne un bacgrandeimage d'un vaiseau alier de diferante couleur que celle de l'enemi  
 il est preferable qui l'image soit in png mais si non le fond doit etre en coileur blanc  
 
